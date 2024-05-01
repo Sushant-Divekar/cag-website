@@ -173,6 +173,41 @@
 //     }
     
 // }
+
+.bubble-loader {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.bubble {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #3498db; /* Blue color */
+  border-radius: 50%;
+  animation: bubble-animation 1s infinite ease-in-out alternate; /* Animation */
+}
+
+@keyframes bubble-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+.bubble:nth-child(2) {
+  left: 20px;
+  animation-delay: 0.2s; /* Delay for the second bubble */
+}
+
+.bubble:nth-child(3) {
+  left: 40px;
+  animation-delay: 0.4s; /* Delay for the third bubble */
+}
   
 .circle {
     position: fixed; /* Set the circle to a fixed position */
@@ -276,6 +311,7 @@
       border: 1px solid #888;
       width: 80%; // Or some other width
       max-width: 600px; // Ensures it doesn't grow too large on wide screens
+      border-radius: 20px;
     }
   
     .close {

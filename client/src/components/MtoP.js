@@ -197,7 +197,12 @@ const MtoP = () => {
           onChange={(e) => setMarks(e.target.value)}
         />
         <button onClick={handleSubmit}>Submit</button>
-        {loading && <div>Loading...</div>}
+        {loading && <div className="bubble-loader">
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+        </div>
+        }
       </div>
       {showModal && (
         <div className="modal">
@@ -211,7 +216,7 @@ const MtoP = () => {
                   <p>Error processing request for Shift {result.shift}</p>
                 ) : (
                   <p>
-                    Shift {result.shift}: {result.percentile}
+                    <span style={{ fontWeight: 'bold' }}>Shift {result.shift}:</span> {result.percentile.toFixed(2)}%
                   </p>
                 )}
               </div>
