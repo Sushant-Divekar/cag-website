@@ -39,7 +39,7 @@
 //         <button className='L-button'>Login</button>
 //         <button className='S-button'>SignUp</button>
 //       </div>
-      
+
 //       {/*Our Mission Box */}
 //       <div className='Vision_div' ref={visionBoxRef} onMouseEnter={handleVisionBoxMouseEnter}>
 //         <div className={`Vision_box ${animateVisionBox ? 'animate' : ''}`} >
@@ -76,6 +76,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Picture from '../Images/Picture.png';
 import './Home.scss';
+import Footer from './Footer';
 
 const Home = () => {
   const [animateVisionBox, setAnimateVisionBox] = useState(false);
@@ -115,16 +116,16 @@ const Home = () => {
 
   return (
     <>
-      <div style={{height:'100vh'}}>
+      <div style={{ height: '100vh' }}>
         <div className={`nameNimg `}>
           <div className='circle'></div> {/* Circle as fixed background */}
           <div className='rectangle'></div>
           <div className='projectName'>
             <p className='pname' >College</p>
-            <p className='pname' style={{ marginTop: '-12%' } }>At</p>
-            <p className='pname' style={{ marginTop: '-12%' } }>Glance</p>
-            <p className='ptag' style={{ marginTop: '-3%' } }>Empowering Futures:</p>
-            <p className='ptag' style={{ marginTop: '-2%' } }>Your Score-Based College Predictions</p>
+            <p className='pname' style={{ marginTop: '-12%' }}>At</p>
+            <p className='pname' style={{ marginTop: '-12%' }}>Glance</p>
+            <p className='ptag' style={{ marginTop: '-3%' }}>Empowering Futures:</p>
+            <p className='ptag' style={{ marginTop: '-2%' }}>Your Score-Based College Predictions</p>
           </div>
           <div className='projectImage'>
             <img className='clgsearch' src={Picture} alt="clgsearch" />
@@ -163,6 +164,9 @@ const Home = () => {
           <div className='feature 4'><p className='featurep'>Avoid Common Pitfalls By <br />Choosing Wrong College</p></div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
